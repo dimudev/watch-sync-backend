@@ -1,0 +1,35 @@
+@URL=http://localhost:
+@PORT=3001
+
+POST {{URL}}{{PORT}}/rooms
+content-type: application/json
+
+{
+  "hostName": "Sofm"
+}
+
+###
+GET {{URL}}{{PORT}}/rooms/K10D7B
+
+###
+POST {{URL}}{{PORT}}/rooms/K10D7B/join
+content-type: application/json
+
+{
+  "username": "Yare"
+}
+
+###
+
+POST {{URL}}{{PORT}}/rooms/K10D7B/queue
+Content-Type: application/json
+
+{
+  "urlOrId": "https://www.youtube.com/watch?v=GCdwKhTtNNw&list=RDPWqEPKduGm8&index=3",
+  "userId": "2bc3823a-8e65-47dc-9c65-c53796c9ec19"
+}
+
+###
+GET {{URL}}{{PORT}}/socket.io/socket.io.js
+
+  
